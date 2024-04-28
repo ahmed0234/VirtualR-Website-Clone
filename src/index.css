@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root{
+    font-family: "Poppins", sans-serif;
+    color-scheme: dark 
+}
+
+
+@layer components{
+    .bggradienthero{
+        @apply bg-gradient-to-r from-orange-500 to-orange-800 bg-clip-text text-transparent
+    }
+}
+
+
+@layer base{
+    body::-webkit-scrollbar-track{
+        @apply bg-neutral-800
+    }
+    body::-webkit-scrollbar-thumb{
+        
+        border-radius: 50px;
+        @apply bg-orange-500
+    }   
+    body::-webkit-scrollbar{
+        width: 5px;
+    }
+
+    html, body{
+        scroll-behavior: smooth;
+    }
+}
